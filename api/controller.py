@@ -3,7 +3,7 @@ from pyfirmata import Arduino, util
 import time
 
 # --- CONFIGURATION ---
-PORT_ARDUINO = "/dev/cu.usbmodem1301" 
+PORT_ARDUINO = "/dev/cu.usbmodem1201" 
 
 class ArduinoController:
     def __init__(self, port):

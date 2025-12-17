@@ -16,11 +16,10 @@ class AutomationService:
         # --- ETAT DU SYSTÈME ---
         self.mode = "NORMAL" # "NORMAL" (Lumière) ou "AUTH" (Attente code)
         self.current_user_auth = None
-        self.input_buffer = [] # Code tapé par l'utilisateur
+        self.input_buffer = [] 
         self.auth_timeout = 0  # Pour annuler si trop long
         
         # --- GESTION DES BOUTONS (Anti-répétition) ---
-        # On stocke l'état précédent pour détecter le moment précis de l'appui (Front Montant)
         self.last_btn_states = [0, 0, 0] # [b1, b2, b3]
 
     def start_authentication(self, username):
@@ -121,9 +120,8 @@ class AutomationService:
     async def handle_normal_mode(self, sensors):
         # Ta logique de lumière existante
         message = ""
-        if sensors.est_sombre: message = f"Trop Sombre ({sensors.ldr})"
-        elif sensors.est_tres_clair: message = f"Trop Clair ({sensors.ldr})"
-        else: message = f"Lumiere OK ({sensors.ldr})"
+        if not sensors.est_sombre: message = f"Personne({sensors.ldr})"
+        else: message = f"Presence({sensors.ldr})"
         
         # On envoie (avec anti-spam basique géré par le controller si besoin)
         # Ici on simplifie
