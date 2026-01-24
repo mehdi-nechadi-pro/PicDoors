@@ -84,7 +84,7 @@ Exemples :
 
 ---
 
-## 🛠️ Sécurité & Logique
+## Sécurité & Logique
 
 ### Authentification à deux facteurs
 1. Reconnaissance faciale (DeepFace / ArcFace)
@@ -95,11 +95,11 @@ Activation de l’IA uniquement lors d’une variation détectée par le capteur
 
 ---
 
-## 🚀 Installation et Démarrage
+## Installation et Démarrage
 
 ---
 
-### ✅ Prérequis
+### Prérequis
 
 - **Python 3.10+**
 - **Arduino IDE**
