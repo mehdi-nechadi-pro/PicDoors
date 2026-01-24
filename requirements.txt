@@ -1,8 +1,6 @@
 deepface==0.0.96
 Flask==3.1.2
-hardware==0.32.0
 insightface==0.7.3
-numpy==2.3.5
 opencv_python==4.11.0.86
 opencv_python_headless==4.11.0.86
 pyFirmata==1.1.0

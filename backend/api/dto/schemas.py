@@ -6,10 +6,9 @@ class SensorDataDTO(BaseModel):
     b2: bool
     b3: bool
 
-    # On peut ajouter des propriétés calculées (helper)
     @property
     def est_sombre(self) -> bool:
-        return self.ldr < 70
+        return self.ldr < 50
     
 class FaceDetectionDTO(BaseModel):
     name: str

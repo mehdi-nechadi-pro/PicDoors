@@ -1,0 +1,4 @@
+
+
+ARDUINO_PORT = "/dev/cu.usbmodem1301" 
+ARDUINO_BAUDRATE = 9600
